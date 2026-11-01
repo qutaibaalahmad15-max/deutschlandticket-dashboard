@@ -2,164 +2,47 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101827">
-  <title>Mein Deutschlandticket</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<title>Meine Uhr</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      padding: 25px 18px;
-      background: #101827;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
+html, body {
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+}
 
-    .container {
-      max-width: 430px;
-      margin: 35px auto;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 30px;
-    }
-
-    h1 {
-      font-size: 25px;
-      margin: 0;
-    }
-
-    .subtitle {
-      color: #9ca3af;
-      margin-top: 8px;
-      font-size: 14px;
-    }
-
-    .ticket {
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 22px;
-      padding: 24px;
-      margin-top: 25px;
-    }
-
-    .label {
-      color: #94a3b8;
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      margin-bottom: 9px;
-    }
-
-    .ticket-title {
-      font-size: 27px;
-      font-weight: bold;
-      margin-bottom: 25px;
-    }
-
-    .status {
-      background: #14532d;
-      color: #86efac;
-      padding: 8px 13px;
-      border-radius: 20px;
-      font-size: 12px;
-    }
-
-    .info {
-      border-top: 1px solid #334155;
-      padding-top: 18px;
-      margin-top: 18px;
-    }
-
-    .value {
-      font-size: 17px;
-      font-weight: bold;
-    }
-
-    .button {
-      display: block;
-      background: #2563eb;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      padding: 16px;
-      border-radius: 13px;
-      font-weight: bold;
-      margin-top: 25px;
-    }
-
-    .footer {
-      color: #64748b;
-      font-size: 11px;
-      text-align: center;
-      margin-top: 25px;
-      line-height: 1.6;
-    }
-  </style>
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: black;
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
 
-    <div class="header">
-      <div>
-        <h1>Mein Ticket</h1>
-        <div class="subtitle">Deine persönliche Übersicht</div>
-      </div>
-      <span style="font-size:30px;">🚆</span>
-    </div>
-
-    <div class="ticket">
-
-      <div style="display:flex;justify-content:space-between;align-items:center;">
-        <div class="label">DEUTSCHLANDTICKET</div>
-        <div class="status">● Übersicht</div>
-      </div>
-
-      <div class="ticket-title">
-        Deutschlandweit<br>unterwegs.
-      </div>
-
-      <div class="info">
-        <div class="label">ANBIETER</div>
-        <div class="value">Deutschlandticket App</div>
-      </div>
-
-      <div class="info">
-        <div class="label">GÜLTIGKEIT</div>
-        <div class="value" id="month"></div>
-      </div>
-
-      <a class="button"
-         href="https://www.deutschlandticket.app/"
-         target="_blank">
-        Originalticket öffnen ↗
-      </a>
-
-    </div>
-
-    <div class="footer">
-      Persönliche Ticket-Übersicht<br>
-      Kein offizieller Fahrschein.
-    </div>
-
-  </div>
-
-  <script>
-    const now = new Date();
-    document.getElementById("month").textContent =
-      new Intl.DateTimeFormat("de-DE", {
-        month: "long",
-        year: "numeric"
-      }).format(now);
-  </script>
+<video
+  autoplay
+  muted
+  loop
+  playsinline
+  controls
+>
+  <source src="a8daef6b-92e9-4dbb-9583-42453b396195.mov" type="video/quicktime">
+  Dein Browser unterstützt dieses Video nicht.
+</video>
 
 </body>
 </html>
