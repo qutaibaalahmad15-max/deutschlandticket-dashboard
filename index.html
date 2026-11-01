@@ -3,7 +3,7 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#000000">
 <title>Meine Uhr</title>
 
@@ -17,16 +17,20 @@
 html, body {
   width: 100%;
   height: 100%;
-  background: black;
+  background: #000;
   overflow: hidden;
 }
 
 video {
+  position: fixed;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  display: block;
-  background: black;
+  border: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 </style>
 </head>
@@ -34,15 +38,27 @@ video {
 <body>
 
 <video
+  id="clock"
   autoplay
   muted
   loop
   playsinline
-  controls
+  webkit-playsinline
+  disablepictureinpicture
+  controlslist="nodownload noplaybackrate nofullscreen"
 >
-  <source src="a8daef6b-92e9-4dbb-9583-42453b396195.mov" type="video/quicktime">
-  Dein Browser unterstützt dieses Video nicht.
+  <source src="./a8daef6b-92e9-4dbb-9583-42453b396195.mov" type="video/quicktime">
 </video>
+
+<script>
+const video = document.getElementById("clock");
+
+video.controls = false;
+
+video.play().catch(() => {
+  console.log("Automatischer Start wurde vom Browser verhindert.");
+});
+</script>
 
 </body>
 </html>
