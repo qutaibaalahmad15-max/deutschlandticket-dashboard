@@ -2,45 +2,86 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#000000">
-<title> </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<link rel="apple-touch-icon" href="icon.png">
-<link rel="icon" type="image/png" href="icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#000000">
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+  <title>Deutschlandticket</title>
 
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: #000;
-}
-
-video {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: contain;
-  pointer-events: none;
-  display: block;
-}
-</style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-<video autoplay muted loop playsinline webkit-playsinline disablepictureinpicture>
-  <source src="./a8daef6b-92e9-4dbb-9583-42453b396195.mov" type="video/quicktime">
-</video>
+
+  <main id="app-content">
+
+    <section class="page active" id="buchen">
+      <h1>Buchen</h1>
+      <p>Willkommen bei deiner Reiseplanung.</p>
+      <div class="content-card">
+        <h2>Verbindung suchen</h2>
+        <input type="text" placeholder="Von">
+        <input type="text" placeholder="Nach">
+        <button class="search-button">Verbindung suchen</button>
+      </div>
+    </section>
+
+    <section class="page" id="umgebung">
+      <h1>Umgebung</h1>
+      <p>Entdecke deine Umgebung.</p>
+      <div class="content-card">
+        <h2>Deine Karte</h2>
+        <p>Hier kommt später deine Karte hinein.</p>
+      </div>
+    </section>
+
+    <section class="page" id="reisen">
+      <h1>Reisen</h1>
+      <p>Deine Reisen auf einen Blick.</p>
+      <div class="content-card">
+        <h2>Meine Reisen</h2>
+        <p>Hier erscheinen später deine Tickets und Reisen.</p>
+      </div>
+    </section>
+
+    <section class="page" id="profil">
+      <h1>Profil</h1>
+      <p>Dein persönlicher Bereich.</p>
+      <div class="content-card">
+        <h2>Persönliche Daten</h2>
+        <p>Hier kommen später deine Profileinstellungen hinein.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav">
+
+    <button class="nav-button active" data-page="buchen">
+      <span>▣</span>
+      <small>Buchen</small>
+    </button>
+
+    <button class="nav-button" data-page="umgebung">
+      <span>⌖</span>
+      <small>Umgebung</small>
+    </button>
+
+    <button class="nav-button" data-page="reisen">
+      <span>▤</span>
+      <small>Reisen</small>
+    </button>
+
+    <button class="nav-button" data-page="profil">
+      <span>♙</span>
+      <small>Profil</small>
+    </button>
+
+  </nav>
+
 </body>
 </html>
