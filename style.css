@@ -1,0 +1,112 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background: #000;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  padding-bottom: calc(85px + env(safe-area-inset-bottom));
+}
+
+#app-content {
+  min-height: 100vh;
+}
+
+.page {
+  display: none;
+  padding: 35px 22px;
+}
+
+.page.active {
+  display: block;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+p {
+  color: #aaa;
+  line-height: 1.5;
+}
+
+.content-card {
+  background: #171717;
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 28px;
+}
+
+.content-card h2 {
+  margin-bottom: 18px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 12px;
+  background: #292929;
+  color: white;
+  border: 1px solid #444;
+  font-size: 16px;
+}
+
+.search-button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  background: #2878e8;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: calc(75px + env(safe-area-inset-bottom));
+  padding: 10px 8px env(safe-area-inset-bottom);
+  background: #111;
+  border-top: 1px solid #292929;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+}
+
+.nav-button {
+  flex: 1;
+  background: none;
+  color: #888;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.nav-button small {
+  font-size: 11px;
+}
+
+.nav-button.active {
+  color: #60a5fa;
+}
