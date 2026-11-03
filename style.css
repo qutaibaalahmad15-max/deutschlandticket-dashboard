@@ -1,55 +1,82 @@
 
+/* GRUNDEINSTELLUNGEN */
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
   width: 100%;
   min-height: 100%;
   background: #000;
-  color: white;
+  color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
 }
 
-body {
+/* APP-INHALT */
+
+#app-content {
+  width: 100%;
+  min-height: 100dvh;
   padding-bottom: calc(85px + env(safe-area-inset-bottom));
 }
 
-#app-content {
-  min-height: 100vh;
-}
+/* SEITEN */
 
 .page {
   display: none;
-  padding: 35px 22px;
+  position: relative;
+  width: 100%;
+  min-height: calc(100dvh - 85px);
+  padding: 25px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .page.active {
   display: block;
 }
 
+/* VOLLbild-FOTOS */
+
+#buchen {
+  background-image: url("images/buchen.jpg");
+}
+
+#umgebung {
+  background-image: url("images/umgebung.jpg");
+}
+
+#reisen {
+  background-image: url("images/reisen.jpg");
+}
+
+#profil {
+  background-image: url("images/profil.jpg");
+}
+
+/* TEXTE */
+
 h1 {
   font-size: 30px;
   margin-bottom: 12px;
 }
 
+h2 {
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
 p {
-  color: #aaa;
+  color: #fff;
   line-height: 1.5;
 }
 
-.content-card {
-  background: #171717;
-  border-radius: 18px;
-  padding: 20px;
-  margin-top: 28px;
-}
-
-.content-card h2 {
-  margin-bottom: 18px;
-}
+/* EINGABEFELDER */
 
 input {
   display: block;
@@ -59,9 +86,11 @@ input {
   border-radius: 12px;
   background: #292929;
   color: white;
-  border: 1px solid #444;
+  border: 1px solid #555;
   font-size: 16px;
 }
+
+/* BUTTONS */
 
 .search-button {
   width: 100%;
@@ -73,6 +102,8 @@ input {
   font-weight: bold;
   margin-top: 10px;
 }
+
+/* UNTERE NAVIGATION */
 
 .bottom-nav {
   position: fixed;
@@ -88,6 +119,8 @@ input {
   align-items: center;
   z-index: 100;
 }
+
+/* NAVIGATIONS-BUTTONS */
 
 .nav-button {
   flex: 1;
